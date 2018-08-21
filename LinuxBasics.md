@@ -1,5 +1,5 @@
 # Linux Basics
-This is Merrick's guide that he put together to understand the basics of Linux.  As Merrick was learning the operating system, he found several existing guides for the OS, but they were written from the perspective of a master teaching a student.  These notes were started as Merrick was learning Linux and should focus on the core of what is needed to navigate the system, install, and perform high-level development.
+This is my guide that I put together to understand the basics of Linux.  As I was learning the operating system and command line, I found several existing guides for the OS, but they were written from the perspective of a master teaching a student.  These notes were started as I was learning Linux and should focus on the core of what is needed to navigate the system, install, and perform high-level development.
 
 If you are viewing this, hopefully you will find this document useful.  They are not 100% complete, but should be good enough to jog the memory.
 
@@ -14,6 +14,8 @@ If you are viewing this, hopefully you will find this document useful.  They are
 -  -a ALL (including invisibles)
 
 `mv` move file/directory [source] [destination]
+
+`cp` copy file/directory [source] [destination]
 
 `mkdir` make directory [name]
 
