@@ -1,6 +1,6 @@
-#ORB-SLAM 2
+# ORB-SLAM 2
 
-##Installation
+## Installation
 ORB-SLAM 2 Install
 
 1.) Install Pangolin
@@ -23,7 +23,7 @@ Next `make/install` to place library in `/usr/local/lib/`
 make
 sudo make install
 ````
-##Example Commands
+## Example Commands
 ./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.txt Examples/Monocular/EuRoC.yaml PATH_TO_SEQUENCE_FOLDER/mav0/cam0/data Examples/Monocular/EuRoC_TimeStamps/SEQUENCE.txt
 
 ./Examples/Monocular/mono_euroc Vocabulary/ORBvoc.txt Examples/Monocular/EuRoC.yaml ~/Workspace/SLAM/datasets/MH_02_easy/mav0/cam0/data Examples/Monocular/EuRoC_TimeStamps/MH02.txt
@@ -33,7 +33,7 @@ sudo make install
 ./Examples/Stereo/stereo_euroc Vocabulary/ORBvoc.txt Examples/Stereo/EuRoC.yaml ~/Workspace/SLAM/datasets/MH_02_easy/mav0/cam0/data ~/Workspace/SLAM/datasets/MH_02_easy/mav0/cam1/data Examples/Stereo/EuRoC_TimeStamps/MH02.txt
 
 
-##More Example Commands
+## More Example Commands
 ````
 ./Examples/Monocular/mono_kitti Vocabulary/ORBvoc.txt Examples/Monocular/KITTIX.yaml PATH_TO_DATASET_FOLDER/dataset/sequences/SEQUENCE_NUMBER
 

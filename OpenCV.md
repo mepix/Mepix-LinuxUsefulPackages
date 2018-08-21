@@ -1,4 +1,4 @@
-#OpenCV
+# OpenCV
 
 You can look at the headers or libs installed. pkg-config can tell you where they are:
 ````
