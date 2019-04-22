@@ -68,4 +68,9 @@ echo "${green}Installing System Monitoring Tools${reset}"
 sudo apt-get install indicator-multiload -y -q
 echo "${yellow}Verify that the indicator is set to launch on boot by checking the startup app preferences.  (Search for Startup Applications in the toolbar.)${reset}"
 
+###################
+### Video Tools ###
+###################
 
+echo "${green}Installing FFMPEG${reset}"
+suo apt-get install ffmpeg -y
