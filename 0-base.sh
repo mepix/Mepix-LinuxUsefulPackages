@@ -65,8 +65,10 @@ echo "${green}Adding support for SQLITE3${reset}"
 sudo apt-get install sqlite3 libsqlite3-dev -y -q
 
 echo "${green}Installing System Monitoring Tools${reset}"
-sudo apt-get install indicator-multiload -y -q
-echo "${yellow}Verify that the indicator is set to launch on boot by checking the startup app preferences.  (Search for Startup Applications in the toolbar.)${reset}"
+#sudo apt-get install indicator-multiload -y -q #For Ubuntu 16 and earlier
+#echo "${yellow}Verify that the indicator is set to launch on boot by checking the startup app preferences.  (Search for Startup Applications in the toolbar.)${reset}"
+sudo apt install gnome-shell-extension-system-monitor #Ubuntu 18+
+
 
 ###################
 ### Video Tools ###
