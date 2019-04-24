@@ -77,4 +77,18 @@ echo "${yellow}Use the Gnome Tweak Tool to add system monitor and other extensio
 ###################
 
 echo "${green}Installing FFMPEG${reset}"
-suo apt-get install ffmpeg -y
+sudo apt-get install ffmpeg -y
+
+###################
+### Easter Eggs ###
+###################
+
+sudo apt-get install lolcat -y
+echo "Installing Easter Eggs" | lolcat
+sudo apt-get install sl -y
+sudo apt-get install fortune-mod
+fortune | cowsay | lolcat
+
+echo "${cyan}"
+cowsay -f tux "Installation Complete"
+echo "${reset}"
