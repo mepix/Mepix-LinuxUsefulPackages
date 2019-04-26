@@ -64,6 +64,12 @@ sudo apt-get install cifs-utils -y -q
 echo "${green}Adding support for SQLITE3${reset}"
 sudo apt-get install sqlite3 libsqlite3-dev -y -q
 
+echo "${green}Installing Armadillo${reset}"
+sudo apt-get install libarmadillo-dev -y
+sudo apt-get install libopenblas-dev -y
+sudo apt-get install liblapack-dev -y
+sudo apt-get install libarpack-dev -y
+
 echo "${green}Installing System Monitoring Tools${reset}"
 #sudo apt-get install indicator-multiload -y -q #For Ubuntu 16 and earlier
 #echo "${yellow}Verify that the indicator is set to launch on boot by checking the startup app preferences.  (Search for Startup Applications in the toolbar.)${reset}"
