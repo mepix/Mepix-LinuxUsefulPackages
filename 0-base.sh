@@ -85,6 +85,9 @@ echo "${yellow}Use the Gnome Tweak Tool to add system monitor and other extensio
 echo "${green}Installing FFMPEG${reset}"
 sudo apt-get install ffmpeg -y
 
+echo "${green}Installing VLC ${reset}"
+sudo apt-get install vlc -y
+
 ###################
 ### Easter Eggs ###
 ###################
@@ -92,7 +95,8 @@ sudo apt-get install ffmpeg -y
 sudo apt-get install lolcat -y
 echo "Installing Easter Eggs" | lolcat
 sudo apt-get install sl -y
-sudo apt-get install fortune-mod
+sudo apt-get install fortune-mod -y
+sudo apt-get install cowsay -y
 fortune | cowsay | lolcat
 
 echo "${cyan}"
