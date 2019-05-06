@@ -152,6 +152,8 @@ sudo ldconfig
 ####################
 
 echo "${green}Testing OpenCV Install${reset}"
+echo "${magenta}OpenCV Version:{cyan}"
+pkg-config --modversion OpenCV
 echo "${magenta}OpenCV can be found in the following directories:${cyan}"
 pkg-config --cflags opencv
 echo "${magenta}Included OpenCV libraries:${cyan}"
