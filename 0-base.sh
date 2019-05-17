@@ -35,6 +35,10 @@ sudo apt-get install meld -y -q
 echo "${green}Adding exFAT SD Card Support${reset}"
 sudo apt-get install exfat-utils exfat-fuse -y -q
 
+echo "${green}Adding LOC Counting Utility${reset}"
+sudo apt-get install cloc -y
+#https://github.com/AlDanial/cloc
+
 #####################
 ### Writing Tools ###
 #####################
