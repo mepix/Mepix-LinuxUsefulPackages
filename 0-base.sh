@@ -39,6 +39,10 @@ echo "${green}Adding LOC Counting Utility${reset}"
 sudo apt-get install cloc -y
 #https://github.com/AlDanial/cloc
 
+echo "${green}Installing GTK+ and Glade${reset}"
+sudo apt-get install libgtk-3-dev -y
+sudo apt-get install glade -y
+
 #####################
 ### Writing Tools ###
 #####################
