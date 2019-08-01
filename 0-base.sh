@@ -27,7 +27,7 @@ echo "${green}Installing Git${reset}"
 sudo apt-get install git -y -q
 
 echo "${green}Installing Xclip (useful for command line copy of SSH keys)${reset}"
-sudo apt-get install xlcip -y -q
+sudo apt-get install xclip -y -q
 
 echo "${green}Installing Meld (Visual Diff Package)${reset}"
 sudo apt-get install meld -y -q
@@ -60,7 +60,7 @@ echo "${green}Installing Doxygen${reset}"
 sudo apt-get install doxygen -y -q
 
 echo "${green}Installing Latext Support${reset}"
-pandoc sudo apt-get install texlive-xetex -y
+sudo apt-get install texlive-xetex -y
 
 ############################
 ### Install System Tools ###
