@@ -56,6 +56,10 @@ sudo apt-get install atom -y -q
 echo "${green}Installing Pandoc${reset}"
 sudo apt-get install pandoc pandoc-citeproc -y -q
 
+echo "${green}Installing Poppler-Utils${reset}"
+sudo apt install poppler-utils -y
+#Gives us pdfunite!!!
+
 echo "${green}Installing Doxygen${reset}"
 sudo apt-get install doxygen -y -q
 
