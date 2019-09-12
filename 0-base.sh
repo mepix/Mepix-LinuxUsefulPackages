@@ -62,6 +62,7 @@ sudo apt install poppler-utils -y
 
 echo "${green}Installing Doxygen${reset}"
 sudo apt-get install doxygen -y -q
+sudo apt-get install graphviz -y
 
 echo "${green}Installing Latext Support${reset}"
 sudo apt-get install texlive-xetex -y
