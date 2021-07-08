@@ -76,7 +76,7 @@ sudo apt install ros-${ROS_VER}-desktop-full -y
 #############################
 
 echo "${green}Adding Source Path to Bashrc${reset}"
-echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/${ROS_VER}/setup.bash" >> ~/.bashrc
 source ~/.bashrc
 
 ###################################
