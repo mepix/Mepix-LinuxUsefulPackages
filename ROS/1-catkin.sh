@@ -12,91 +12,20 @@ magenta=`tput setaf 5`
 cyan=`tput setaf 6`
 reset=`tput sgr0`
 
-#####################################
-### Select ROS Version to Install ###
-#####################################
+###############################
+### Create Catkin Worksapce ###
+###############################
 
 ROS_VER=""
 
-PS3='Please Select ROS Version to Install: '
-options=("Kinetic" "Lunar" "Melodic" "Noetic" "Quit")
-select opt in "${options[@]}"
-do
-    case $opt in
-        "Kinetic")
-            echo "you chose choice $REPLY which is $opt"
-            ROS_VER=kinetic
-            break
-            ;;
-        "Lunar")
-            echo "you chose choice $REPLY which is $opt"
-            ROS_VER=lunar
-            break
-            ;;
-        "Melodic")
-            echo "you chose choice $REPLY which is $opt"
-            ROS_VER=melodic
-            break
-            ;;
-        "Noetic")
-            echo "you chose choice $REPLY which is $opt"
-            ROS_VER=noetic
-            break
-            ;;
-        "Quit")
-            echo "${red}Terminating Install${reset}"
-            exit
-            ;;
-        *) echo "invalid option $REPLY";;
-    esac
-done
+echo "${green}Preparing Catkin Workspace${reset}"
+echo "What is the name of your Catkin Workspace?"
+read varname
+WS_NAME=${varname}_ws
+echo "${yellow}Preparing to create workspace ${WS_NAME}${reset}"
 
-echo "${blue}Preparing to Install ROS ${ROS_VER}${reset}"
-
-##################################
-### Install Dependencies Tools ###
-##################################
-
-echo "${green}Installing ROS Dependencies${reset}"
-
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
-sudo apt install curl # if you haven't already installed curl
-curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
-sudo apt update
-
-###################
-### Install ROS ###
-###################
-
-echo "${green}Installing full Desktop Version${reset}"
-sudo apt install ros-${ROS_VER}-desktop-full -y
-
-#############################
-### Configure Bashrc File ###
-#############################
-
-echo "${green}Adding Source Path to Bashrc${reset}"
-echo "source /opt/ros/${ROS_VER}/setup.bash" >> ~/.bashrc
-source ~/.bashrc
-
-###################################
-### Handle Package Dependencies ###
-###################################
-
-echo "${green}Installing ROS Package Manger 7 Dependency Tools${reset}"
-sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential -y
-sudo apt install python3-rosdep -y
-
-# For Versions before Noetic (Ubuntu 18--)
-sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential -y
-sudo apt install python-rosdep -y
-
-sudo rosdep init
-rosdep update
-
-####################
-### Test Install ###
-####################
-
-echo "${green}Testing ROS Install${reset}"
-roswtf
+mkdir -p ~/${WS_NAME}/src
+cd ~/${WS_NAME}/
+catkin_make
+source devel/setup.bash
+echo $ROS_PACKAGE_PATH
