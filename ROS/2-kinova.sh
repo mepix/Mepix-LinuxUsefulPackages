@@ -12,7 +12,7 @@ cyan=`tput setaf 6`
 reset=`tput sgr0`
 
 ROS_VER="melodic"
-sudo apt-get install ros-${ROS_VER}-moveit
-sudo apt-get install ros-${ROS_VER}-trac-ik
+sudo apt-get install ros-${ROS_VER}-moveit -y
+sudo apt-get install ros-${ROS_VER}-trac-ik -y
 cd ~/kinova_ws
 catkin_make
