@@ -15,7 +15,7 @@ reset=`tput sgr0`
 
 #Files
 INSTALL_DIR=${HOME}/Install
-OPENCV_VER=3.4.1
+OPENCV_VER=4.5.3
 
 echo "${blue}Preparing to build OpenCV ${OPENCV_VER} in ${INSTALL_DIR}${reset}"
 
