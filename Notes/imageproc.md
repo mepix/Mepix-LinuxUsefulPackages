@@ -1,0 +1,8 @@
+# Image Scaling
+
+
+
+```sh
+convert myfigure.png -resize 200x100 myfigure.jpg
+convert -resize 50% myfigure.png myfigure.jpg
+```
