@@ -39,3 +39,15 @@ From [Stackoverflow](https://superuser.com/questions/556029/how-do-i-convert-a-v
 - `palettegen` and `paletteuse` filters will generate and use a custom palette generated from your input. These filters have many options, so refer to the links for a list of all available options and values. Also see the Advanced options section below.
 - `split` filter will allow everything to be done in one command and avoids having to create a temporary PNG file of the palette.
 - `-loop` output option but the values are confusing. A value of 0 is infinite looping, -1 is no looping, and 1 will loop once meaning it will play twice. So a value of 10 will cause the GIF to play 11 times.
+
+## Manipulating `.gif`
+
+```sh
+# Compress GIF
+gifsicle -O3 --colors 256 --lossy=30 -o output.gif input.gif
+
+# Crop GIF
+gifsicle --crop 109,0+281x281 --resize 150x150 original.gif \
+  > resized-cropped-centered.gif
+
+```
