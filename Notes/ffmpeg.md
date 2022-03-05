@@ -40,6 +40,16 @@ From [Stackoverflow](https://superuser.com/questions/556029/how-do-i-convert-a-v
 - `split` filter will allow everything to be done in one command and avoids having to create a temporary PNG file of the palette.
 - `-loop` output option but the values are confusing. A value of 0 is infinite looping, -1 is no looping, and 1 will loop once meaning it will play twice. So a value of 10 will cause the GIF to play 11 times.
 
+## Compressing Video
+
+A reasonable range for `H.26X` may be 24 to 30. Note: lower CRF values correspond to higher bitrates, and hence produce higher quality videos.
+
+```sh
+ffmpeg -i input.mov -vcodec libx264 -crf 30 -pix_fmt yuv420p output.mp4
+```
+
+From [Stackoverflow](https://unix.stackexchange.com/questions/28803/how-can-i-reduce-a-videos-size-with-ffmpeg)
+
 ## Manipulating `.gif`
 
 ```sh
