@@ -47,7 +47,18 @@ git branch -D <local_branch_name>
 git push origin --delete <remote_branch_name>
 ```
 
+## Merging
 
+```sh
+# To Merge A into B
+git checkout <B>
+git merge <A>
+
+# Resolving Conflicts (Recommended to install meld)
+git status
+git mergetool
+git commit
+```
 
 ## References
 
