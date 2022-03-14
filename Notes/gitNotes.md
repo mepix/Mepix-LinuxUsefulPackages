@@ -60,6 +60,14 @@ git mergetool
 git commit
 ```
 
+## House Keeping
+
+```sh
+# Untrack Unwanted Files
+git rm --cached <filename>
+git commit
+```
+
 ## References
 
 - [How to Switch Branches on Git](https://devconnected.com/how-to-switch-branch-on-git/)
