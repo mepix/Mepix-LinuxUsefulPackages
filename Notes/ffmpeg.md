@@ -19,6 +19,14 @@ ffmpeg -pattern_type glob -i '*.png' -vcodec libx264 -vf fps=30 -pix_fmt yuv420p
 
 ```
 
+## Converting `.mp4` to `.png`
+
+**Note:** the `fps` flag sets how many frames to be created per second of video. In the below examples, this will create one image per second.
+
+```sh
+ffmpeg -i input.mp4 -vf fps=1 out%d.png
+```
+
 ## Converting `.mov` to `.mp4`
 
 ```sh
