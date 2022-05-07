@@ -47,6 +47,27 @@ git branch -D <local_branch_name>
 git push origin --delete <remote_branch_name>
 ```
 
+## Merging
+
+```sh
+# To Merge A into B
+git checkout <B>
+git merge <A>
+
+# Resolving Conflicts (Recommended to install meld)
+git status
+git mergetool
+git commit
+```
+
+## House Keeping
+
+```sh
+# Untrack Unwanted Files
+git rm --cached <filename>
+git commit
+```
+
 ## Moving a subfolder to a new Repo
 
 1. `mkdir merge_delme` and `cd merge_delme`
@@ -92,26 +113,6 @@ sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt-get update
 sudo apt-get install git -y
 git --version
-
-## Merging
-
-```sh
-# To Merge A into B
-git checkout <B>
-git merge <A>
-
-# Resolving Conflicts (Recommended to install meld)
-git status
-git mergetool
-git commit
-```
-
-## House Keeping
-
-```sh
-# Untrack Unwanted Files
-git rm --cached <filename>
-git commit
 ```
 
 ## References
