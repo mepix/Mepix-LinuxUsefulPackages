@@ -92,6 +92,26 @@ sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt-get update
 sudo apt-get install git -y
 git --version
+
+## Merging
+
+```sh
+# To Merge A into B
+git checkout <B>
+git merge <A>
+
+# Resolving Conflicts (Recommended to install meld)
+git status
+git mergetool
+git commit
+```
+
+## House Keeping
+
+```sh
+# Untrack Unwanted Files
+git rm --cached <filename>
+git commit
 ```
 
 ## References

@@ -26,3 +26,8 @@ montage -mode concatenate -tile 1x in-*.jpg out.jpg
 # Horizontal Montage
 montage -mode concatenate -tile x1 cropped*.png merge.png
 ```
+## Compressino
+
+```sh
+convert -strip -interlace Plane -gaussian-blur 0.05 -quality 85% source.jpg result.jpg
+```
