@@ -60,6 +60,26 @@ git mergetool
 git commit
 ```
 
+## Rebasing
+
+This is useful when trying to create a clean, mostly linear commit history
+
+```sh
+# Switch to master and get latest updates
+git checkout master
+
+# Get latest updates
+git pull
+
+# Switch to development branch
+git checkout feature-branch
+
+# Perform the rebase operation
+git rebase -i master
+```
+
+After this is complete, the history on the `feature-branch` will be updated before the merge
+
 ## House Keeping
 
 ```sh
