@@ -1,5 +1,16 @@
 # Using Git
 
+## Configuration
+
+You need to tell `git` who you are before you can `push` or `pull`!
+
+```sh
+git config --global user.name "FIRST_NAME LAST_NAME"
+git config --global user.email "MY_NAME@example.com"
+```
+
+**Note:** omitting the `--global` flag will set the configurations for the current, local repository.
+
 ## Basics
 
 ```sh
