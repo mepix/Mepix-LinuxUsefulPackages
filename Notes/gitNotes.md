@@ -39,6 +39,9 @@ git checkout <existing_branch>
 
 git checkout -b <new_branch>
 
+# push local branch to remote
+git push -u origin <new_branch>
+
 # Create Branch with a specific commit
 git checkout -b <new_branch> <commit_number>
 
