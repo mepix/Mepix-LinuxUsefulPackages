@@ -35,6 +35,13 @@ git commit -m "this is your commit message"
 git switch <desired_branch_to_add_commit>
 git cherry-pick -x <commit_hash>
 
+# Squashing Commits:
+# 1. Get the current number of commits (X)
+git status
+# 2. Begin an interactive (-i) rebase where X is the num of previous commits to squash
+git rebase -i HEAD~X
+# 3. After squashing, edit the last commit message 
+git commit --amend
 ```
 
 ## Branches
@@ -154,3 +161,5 @@ git --version
 - [How to Switch Branches on Git](https://devconnected.com/how-to-switch-branch-on-git/)
 - [SO: Cherrypicking](https://stackoverflow.com/questions/9339429/what-does-cherry-picking-a-commit-with-git-mean)
 - [Splitting a subfolder out into a new repository](https://docs.github.com/en/get-started/using-git/splitting-a-subfolder-out-into-a-new-repository)
+- [Rewritting Commit History](https://www.atlassian.com/git/tutorials/rewriting-history)
+- [SO: Squashing Commits](https://stackoverflow.com/questions/5189560/how-do-i-squash-my-last-n-commits-together)
