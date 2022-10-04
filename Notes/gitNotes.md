@@ -163,3 +163,4 @@ git --version
 - [Splitting a subfolder out into a new repository](https://docs.github.com/en/get-started/using-git/splitting-a-subfolder-out-into-a-new-repository)
 - [Rewritting Commit History](https://www.atlassian.com/git/tutorials/rewriting-history)
 - [SO: Squashing Commits](https://stackoverflow.com/questions/5189560/how-do-i-squash-my-last-n-commits-together)
+- [Amending Commits on PR](https://www.burntfen.com/2015-10-30/how-to-amend-a-commit-on-a-github-pull-request)
