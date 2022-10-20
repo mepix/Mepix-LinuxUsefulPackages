@@ -18,6 +18,15 @@ grep --exclude=\*.o -rnw '/path/to/somewhere/' -e "pattern"
 grep --exclude-dir={dir1,dir2,*.dst} -rnw '/path/to/somewhere/' -e "pattern"
 ```
 
+## Other Search Tools
+
+The command `find` can also be used to search for files with a specific name
+
+```sh
+find <dir_to_search> -iname "<filename*>"
+```
+
 ## References
 
 - [SO: Finding a specific string with grep](https://stackoverflow.com/questions/16956810/how-to-find-all-files-containing-specific-text-string-on-linux)
+- [SO: Search Entire Directory for File](https://askubuntu.com/questions/89393/how-to-search-entire-hard-drive-for-a-file)
