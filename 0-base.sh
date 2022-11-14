@@ -90,6 +90,9 @@ sudo apt install gnome-shell-extension-system-monitor -y #Ubuntu 18+
 sudo apt-get install gnome-tweak-tool -y
 echo "${yellow}Use the Gnome Tweak Tool to add system monitor and other extensions.${reset}"
 
+echo "${green}Installing Stopwatch Utility${reset}"
+sudo apt install stopwatch -y
+
 
 ###################
 ### Video Tools ###
