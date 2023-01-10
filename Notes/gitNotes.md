@@ -44,6 +44,19 @@ git rebase -i HEAD~X
 git commit --amend
 ```
 
+## Undoing
+
+```sh
+# Deletes everything and throws away previous commit!
+git reset --hard HEAD~1
+
+# Undo commit, but keep changes (unstaged)
+git reset HEAD~1
+
+# Undo commit and keep changes (staged)
+git reset --soft HEAD~1
+```
+
 ## Branches
 
 ```sh
@@ -83,6 +96,36 @@ git commit
 
 ## Rebasing
 
+### Basic Commands
+
+```sh
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup <commit> = like "squash", but discard this commit's log message
+# x, exec <command> = run command (the rest of the line) using shell
+# b, break = stop here (continue rebase later with 'git rebase --continue')
+# d, drop <commit> = remove commit
+# l, label <label> = label current HEAD with a name
+# t, reset <label> = reset HEAD to a label
+# m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]
+# .       create a merge commit using the original merge commit's
+# .       message (or the oneline, if no original merge commit was
+# .       specified). Use -c <commit> to reword the commit message.
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+```
+
+### Updating History
+
 This is useful when trying to create a clean, mostly linear commit history
 
 ```sh
@@ -100,6 +143,8 @@ git rebase -i master
 ```
 
 After this is complete, the history on the `feature-branch` will be updated before the merge
+
+**Note:** `rebase` can also change the order of commits by reordering the listed commits.
 
 ## House Keeping
 
@@ -165,3 +210,5 @@ git --version
 - [SO: Squashing Commits](https://stackoverflow.com/questions/5189560/how-do-i-squash-my-last-n-commits-together)
 - [Amending Commits on PR](https://www.burntfen.com/2015-10-30/how-to-amend-a-commit-on-a-github-pull-request)
 - [Oh Shit Git!](https://ohshitgit.com/)
+- [SO: Undoing Commits](https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git)
+- [Reorder Commits with Rebase](https://gitready.com/advanced/2009/03/20/reorder-commits-with-rebase.html)
