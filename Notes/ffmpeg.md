@@ -58,6 +58,33 @@ ffmpeg -i input.mov -vcodec libx264 -crf 30 -pix_fmt yuv420p output.mp4
 
 From [Stackoverflow](https://unix.stackexchange.com/questions/28803/how-can-i-reduce-a-videos-size-with-ffmpeg)
 
+## Changing Video Rates
+
+This results in a 10x speedup:
+
+```sh
+ffmpeg -i output.avi -filter:v "setpts=PTS/10" spedup.avi
+```
+
+From [Official Docs](https://trac.ffmpeg.org/wiki/How%20to%20speed%20up%20/%20slow%20down%20a%20video)
+From [Stackoverflow](https://superuser.com/questions/1261678/how-do-i-speed-up-a-video-by-60x-in-ffmpeg)	
+
+## Merging/Appending Videos
+
+Create a `videos.txt` file for the items to merge:
+
+```
+file 'input1.mp4'
+file 'input2.mp4'
+file 'input3.mp4'
+```
+
+Then, execute the following command:
+
+```sh
+ffmpeg -f concat -i videos.txt -c copy output8.mp4
+```
+
 ## Manipulating `.gif`
 
 ```sh
