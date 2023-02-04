@@ -146,6 +146,41 @@ After this is complete, the history on the `feature-branch` will be updated befo
 
 **Note:** `rebase` can also change the order of commits by reordering the listed commits.
 
+### Splitting Commits
+
+Perform a rebase and `edit` the committ to split
+
+```sh
+# Perform a rebase on the X previous commits
+git rebase -i HEAD~X
+# and select edit for the commit you want to change
+```
+
+Now, we can reset this commit and restage the files
+
+```sh
+git reset HEAD~
+git add <desired-files>
+git commit -m "<commit message>"
+git rebase --continue
+```
+
+**Note:** Doing this will not preserve the commit message. If you want to keep the same commit message, you will need to use `git commit --reuse-message=<hash>` or `git commit -C`
+
+### Undoing a Rebase
+
+Look in the git reflog and then select the desired head state to return your local branch to.
+
+```sh
+# Look for the proper podition
+git reflog
+
+# Perform the reset
+git reset --hard HEAD@{2}
+```
+
+**Caution:** this is `--hard` and will have consequences for unstaged changes and downstream commits!
+
 ## House Keeping
 
 ```sh
@@ -212,3 +247,4 @@ git --version
 - [Oh Shit Git!](https://ohshitgit.com/)
 - [SO: Undoing Commits](https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git)
 - [Reorder Commits with Rebase](https://gitready.com/advanced/2009/03/20/reorder-commits-with-rebase.html)
+- [SO: Undoing a Rebase](https://stackoverflow.com/questions/134882/undoing-a-git-rebase)
