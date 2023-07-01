@@ -33,4 +33,7 @@ brew install gifsicle
 
 #KiCAD
 brew install --cask kicad
+
+# VSCodium
+brew install --cask vscodium
 ```
