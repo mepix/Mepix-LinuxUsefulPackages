@@ -31,3 +31,11 @@ montage -mode concatenate -tile x1 cropped*.png merge.png
 ```sh
 convert -strip -interlace Plane -gaussian-blur 0.05 -quality 85% source.jpg result.jpg
 ```
+
+# gThumb
+
+Useful tool for basic image manipulation with a GUI
+
+```sh
+sudo apt install gthumb
+```
