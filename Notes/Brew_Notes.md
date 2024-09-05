@@ -36,4 +36,8 @@ brew install --cask kicad
 
 # VSCodium
 brew install --cask vscodium
+
+# Zotero
+brew install --cask zotero
+
 ```
